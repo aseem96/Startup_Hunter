@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var myLatLong = {lat: 18.4575997, lng: 73.8506814};
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(18.4575997, 73.8506814),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'PICT'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+        <meta charset="utf-8">
+        <title>CONTACT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+        <link rel="stylesheet" href="assets/css/flexslider.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <div class="container">
+            <div class="header row">
+                <div class="span12">
+                    <div class="navbar">
+			<div style="float:left;">
+                           <br><h1>
+                                <a class="brand" href="index.html"></a>
+                            </h1></div>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav pull-right">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="newstartup.html">NEW STARTUP?</a>
+                                    </li>
+                                    <li>
+                                        <a href="admin.html">ADMIN</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li class="current-page">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+	<br><br>
+    <div class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <i class="icon-envelope-alt page-title-icon"></i>
+                        <h2>Contact Us /</h2>
+                        <p>Here is how you can contact us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="contact-us container">
+            <div class="row">
+                <div class="contact-form span7">
+                    <p>WRITE TO US WITH YOUR QUERIES!</p>
+                    <form method="post" action="assets/sendmail.php">
+                        <label for="name" class="nameLabel">Name</label>
+                          <input id="name" type="text" name="name" placeholder="Enter your name...">
+                        <label for="email" class="emailLabel">Email</label>
+                          <input id="email" type="text" name="email" placeholder="Enter your email...">
+                        <label for="subject">Subject</label>
+                          <input id="subject" type="text" name="subject" placeholder="Your subject...">
+                        <label for="message" class="messageLabel">Message</label>
+                          <textarea id="message" name="message" placeholder="Your message..."></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <!div class="contact-address span5">
+                    <h4>We Are Here</h4>
+                    <div id="map"></div>
+                    <h4>Address:<br><br>
+                    Pune Institute Of Computer Techonology,Pune. </h4>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
+
